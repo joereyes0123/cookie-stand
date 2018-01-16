@@ -1,0 +1,18 @@
+body{
+  background-color: rgb(27, 104, 167);
+  text-align: center;
+}
+h1{
+  font-family: 'Macondo', cursive; 
+  font-family: 'Slabo 27px', serif;
+  color: rgb(83, 8, 8);
+  padding: 15px;
+}
+li{
+  color: rgb(29, 1, 1);
+  padding: 4px;
+  font-size: 14px;
+  font-family: sans-serif;
+}
+
+
