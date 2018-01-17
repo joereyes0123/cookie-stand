@@ -2,6 +2,10 @@ body{
   background-color: rgb(27, 104, 167);
   text-align: center;
 }
+table{
+  background-color: rgb(238, 17, 17);
+  border-color: black;
+}
 h1{
   font-family: 'Macondo', cursive; 
   font-family: 'Slabo 27px', serif;
