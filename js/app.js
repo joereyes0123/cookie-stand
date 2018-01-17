@@ -15,32 +15,56 @@ function StoreLoc(sTname, minCust, maxCust, avgCust){
 
 StoreLoc.prototype.cookieAmount = function(){
   var cookieTotal = 0;
-  // var tbTr = document.createElement('tr');
-  // var tbTd = document.createElement('td');
-  // tbTd.textContent = this.sTname;
-  // tbTr.appendChild(tbTd);
-  // storeTable.appendChild(tbTd);
   var tbTr = document.createElement('tr');
+  var tbTd = document.createElement('td');
+  tbTd.textContent = this.sTname;
+  tbTr.appendChild(tbTd);
   for(var i = 0; i < timeSale.length; i++){
     var cookieHour = Math.ceil(this.avgCust * (Math.random() * (this.maxCust - this.minCust) + this.minCust));
     cookieTotal += cookieHour;
-    
-    var tbTd = document.createElement('td');
+    tbTd = document.createElement('td');
     tbTd.textContent = cookieHour;
     tbTr.appendChild(tbTd);
-    storeTable.appendChild(tbTr);
   }
+  tbTd = document.createElement('td');
+  tbTd.textContent = cookieTotal;
+  tbTr.appendChild(tbTd);
+  storeTable.appendChild(tbTr);
   return cookieTotal;
 };
 
-var firstPike = new StoreLoc('firstPike', 23, 65, 6.3);
-var seaTacA = new StoreLoc('SeaTac Airport', 23, 65, 6.3);
-// var firstPike = new StoreLoc('firstPike', 23, 65, 6.3);
-// var firstPike = new StoreLoc('firstPike', 23, 65, 6.3);
-// var firstPike = new StoreLoc('firstPike', 23, 65, 6.3);
+function cookieHeader(){
+  var tbTr = document.createElement('tr');
+  var tbTh = document.createElement('th');
+  tbTh.textContent = 'testtesttest';
+  tbTr.appendChild(tbTh);
+  for(var i = 0; i < timeSale.length; i++){
+    tbTh = document.createElement('th');
+    tbTh.textContent = timeSale[i];
+    tbTr.appendChild(tbTh);
+  }
+  tbTh = document.createElement('th');
+  tbTh.textContent = 'Total';
+  tbTr.appendChild(tbTh);
+  storeTable.appendChild(tbTr);
+  return timeSale;
+}
 
+
+var firstPike = new StoreLoc('firstPike', 23, 65, 6.3);
+var seaTacAirport = new StoreLoc('seaTacAir', 3, 24, 1.2);
+var seaCenter = new StoreLoc('seaCenter', 11, 38, 3.7);
+var capitolHill = new StoreLoc('capitolHill', 20, 38, 2.3);
+var alki = new StoreLoc('alki', 2, 16, 4.6);
+
+
+cookieHeader();
 firstPike.cookieAmount();
-seaTacA.cookieAmount();
+seaTacAirport.cookieAmount();
+seaCenter.cookieAmount();
+capitolHill.cookieAmount();
+alki.cookieAmount();
+
 
 
 
