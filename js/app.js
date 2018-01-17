@@ -5,6 +5,8 @@ var timeSale = ['6am ', '7am ', '8am ' , '9am ', '10am ', '11am ', '12pm ', '1pm
 var allStore = [];
 var storeTable = document.getElementById('salmon_table');
 
+
+//Creates Cookies Store location Obkects
 function StoreLoc(sTname, minCust, maxCust, avgCust){
   this.sTname = sTname;
   this.minCust = minCust;
@@ -13,6 +15,8 @@ function StoreLoc(sTname, minCust, maxCust, avgCust){
   allStore.push(this);
 }
 
+
+//Method for the Cookie Store Locations
 StoreLoc.prototype.cookieAmount = function(){
   var cookieTotal = 0;
   var tbTr = document.createElement('tr');
@@ -33,6 +37,8 @@ StoreLoc.prototype.cookieAmount = function(){
   return cookieTotal;
 };
 
+
+//Creates headers for cookie data table
 function cookieHeader(){
   var tbTr = document.createElement('tr');
   var tbTh = document.createElement('th');
@@ -50,14 +56,14 @@ function cookieHeader(){
   return timeSale;
 }
 
-
+//Creates cookie Objects
 var firstPike = new StoreLoc('firstPike', 23, 65, 6.3);
 var seaTacAirport = new StoreLoc('seaTacAir', 3, 24, 1.2);
 var seaCenter = new StoreLoc('seaCenter', 11, 38, 3.7);
 var capitolHill = new StoreLoc('capitolHill', 20, 38, 2.3);
 var alki = new StoreLoc('alki', 2, 16, 4.6);
 
-
+//Call Objects
 cookieHeader();
 firstPike.cookieAmount();
 seaTacAirport.cookieAmount();
