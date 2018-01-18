@@ -9,33 +9,32 @@
          <body>
              <h1>Testing</h1>
             
-            <table id="salmon_table">
+            <table id="salmon_table"></table>
 
-                
-             <!-- <tr>Salmon Sale</tr>
-             
-                <ul id="Pike">
-       
-               </ul>
-             <h1> SeaTac Airport</h1>
-               <ul id="Airport">
-                  
-                </ul>
-             <h1>Seattle Center</h1>
-                <ul id="Center">
-                  
-                </ul>
-             <h1> Capitol Hill</h1>
-                <ul id="Hill">
-                  
-                </ul>
-             <h1> Our Store Locations</h1>
-                <ul id="Alki">
-                  
-                </ul> -->
-            </table>
+            <form id="newStore">
+                <fieldset>
+                    <legend>Add A New Store</legend>
+                    
+                    <label for="sTnamef">Store Name</label>
+                    <input name="sTnamef" type="text"/>
+
+                    <label for="minCustf">Min_Customer</label>
+                    <input name="minCustf" type="number"/>
+
+                    <label for="maxCustf">Max Customer</label>
+                    <input name="maxCustf" type="number"/>
+
+                    <label for="avgCustf">avg Customer</label>
+                    <input name="avgCustf" type="number"/>
+
+                    <button id="addStoref">Submit Store</button>
+
+                </fieldset>
+            </form>
             
         
         <script type="text/javascript" src="js/app.js"></script> 
     
     </body>
+
+</html>
