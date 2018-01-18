@@ -111,8 +111,8 @@ function addNewStore(event){
   event.preventDefault();
   var sTname1 = event.target.sTnamef.value;
   var minCust1 = event.target.minCustf.valueAsNumber;
-  console.log('testigngngngngngngngngnggn' , minCust1);
-  console.log('testigngngngngngngngngnggn' , typeof minCust1);
+  console.log('test' , minCust1);
+  console.log('test' , typeof minCust1);
   var maxCust1 = event.target.maxCustf.valueAsNumber;
   var avgCust1 = event.target.avgCustf.valueAsNumber;
 
