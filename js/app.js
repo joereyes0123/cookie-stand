@@ -2,7 +2,7 @@
 
 //Time Stamp Array for all stores
 var timeSale = ['6am ', '7am ', '8am ' , '9am ', '10am ', '11am ', '12pm ', '1pm ', '2pm ','3pm ', '4pm ', '5pm ','6pm ', '7pm ', '8pm '];
-
+var cookieTotal = [];
 
 //Object 1st and Pike
 var firstPike = {
@@ -11,16 +11,17 @@ var firstPike = {
   avgCust: 6.3,
   cookieAmount: function(){
     var ulElGet = document.getElementById('Pike');
-    var cookieTotal = 0;
+    var firstCookieTotal = 0;
     for(var i = 0; i < timeSale.length; i++){
       var cookieHour = Math.ceil(this.avgCust * (Math.random() * (this.maxCust - this.minCust) + this.minCust));
-      cookieTotal += cookieHour;
+      firstCookieTotal += cookieHour;
       var liEl = document.createElement('li');
       liEl.textContent = 'Cookies sold at  ' + timeSale[i] +  ' : ' + cookieHour;
       ulElGet.appendChild(liEl);
     } 
+    cookieTotal.push(firstCookieTotal);
     var liEl1 = document.createElement('li');
-    liEl1.textContent = 'Total number of cookie sold today  ' + cookieTotal;
+    liEl1.textContent = 'Total number of cookie sold today  ' + cookieTotal[0];
     ulElGet.appendChild(liEl1);
   }
 };
@@ -32,18 +33,19 @@ var seaTacAir = {
   avgCust: 1.2,
   cookieAmount: function(){
     var ulElGet = document.getElementById('Airport');
-    var cookieTotal = 0;
+    var seaCookieTotal = 0;
     for(var i = 0; i < timeSale.length; i++){
       var cookieHour = Math.ceil(this.avgCust * (Math.random() * (this.maxCust - this.minCust) + this.minCust));
-      cookieTotal += cookieHour;
+      seaCookieTotal += cookieHour;
       var liEl = document.createElement('li');
       liEl.textContent = 'Cookies sold at  ' + timeSale[i] + ' : ' + cookieHour;
       ulElGet.appendChild(liEl);
+      
     }
+    cookieTotal.push(seaCookieTotal);
     var liEl1 = document.createElement('li');
-    liEl1.textContent = 'Total number of cookie sold today  ' + cookieTotal;
+    liEl1.textContent = 'Total number of cookie sold today  ' + cookieTotal[1];
     ulElGet.appendChild(liEl1);
-
   }
 };
 
@@ -55,16 +57,17 @@ var seattleCenter = {
   avgCust: 3.7,
   cookieAmount: function(){
     var ulElGet = document.getElementById('Center');
-    var cookieTotal = 0;
+    var centerCookieTotal = 0;
     for(var i = 0; i < timeSale.length; i++){
       var cookieHour = Math.ceil(this.avgCust * (Math.random() * (this.maxCust - this.minCust) + this.minCust));
-      cookieTotal += cookieHour;
+      centerCookieTotal += cookieHour;
       var liEl = document.createElement('li');
       liEl.textContent = 'Cookies sold at  ' + timeSale[i] + ' : ' + cookieHour;
       ulElGet.appendChild(liEl);
     }
+    cookieTotal.push(centerCookieTotal);
     var liEl1 = document.createElement('li');
-    liEl1.textContent = 'Total number of cookie sold today  ' + cookieTotal;
+    liEl1.textContent = 'Total number of cookie sold today  ' + cookieTotal[2];
     ulElGet.appendChild(liEl1);
 
   }
@@ -78,16 +81,17 @@ var capitolHill = {
   avgCust: 2.3,
   cookieAmount: function(){
     var ulElGet = document.getElementById('Hill');
-    var cookieTotal = 0;
+    var hillCookieTotal = 0;
     for(var i = 0; i < timeSale.length; i++){
       var cookieHour = Math.ceil(this.avgCust * (Math.random() * (this.maxCust - this.minCust) + this.minCust));
-      cookieTotal += cookieHour;
+      hillCookieTotal += cookieHour;
       var liEl = document.createElement('li');
       liEl.textContent = 'Cookies sold at  ' + timeSale[i] + ' : ' + cookieHour;
       ulElGet.appendChild(liEl);
     }
+    cookieTotal.push(hillCookieTotal);
     var liEl1 = document.createElement('li');
-    liEl1.textContent = 'Total number of cookie sold today  ' + cookieTotal;
+    liEl1.textContent = 'Total number of cookie sold today  ' + cookieTotal[3];
     ulElGet.appendChild(liEl1);
 
   }
@@ -101,16 +105,17 @@ var alki = {
   avgCust: 4.6,
   cookieAmount: function(){
     var ulElGet = document.getElementById('Alki');
-    var cookieTotal = 0;
+    var alkiCookieTotal = 0;
     for(var i = 0; i < timeSale.length; i++){
       var cookieHour = Math.ceil(this.avgCust * (Math.random() * (this.maxCust - this.minCust) + this.minCust));
-      cookieTotal += cookieHour;
+      alkiCookieTotal += cookieHour;
       var liEl = document.createElement('li');
       liEl.textContent = 'Cookies sold at  ' + timeSale[i] + ' : ' + cookieHour;
       ulElGet.appendChild(liEl);
     }
+    cookieTotal.push(alkiCookieTotal);
     var liEl1 = document.createElement('li');
-    liEl1.textContent = 'Total number of cookie sold today  ' + cookieTotal;
+    liEl1.textContent = 'Total number of cookie sold today  ' + cookieTotal[4];
     ulElGet.appendChild(liEl1);
 
   }
