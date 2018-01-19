@@ -5,7 +5,7 @@ var timeSale = ['6am ', '7am ', '8am ' , '9am ', '10am ', '11am ', '12pm ', '1pm
 var allStore = [];
 var storeTable = document.getElementById('salmon_table');
 var storeForm = document.getElementById('newStore');
-var cookieTotal1 = 0;
+
 
 //Creates Cookies Store location Obkects
 function StoreLoc(sTname, minCust, maxCust, avgCust){
@@ -35,14 +35,10 @@ StoreLoc.prototype.cookieAmount = function(){
     tbTd.textContent = cookieHour;
     tbTr.appendChild(tbTd);
   }
-  for(var t = 0; t < allStore.length; t++){
-    cookieTotal1 += cookieTotal;
-  } 
   tbTd = document.createElement('td');
   tbTd.textContent = cookieTotal;
   tbTr.appendChild(tbTd);
   storeTable.appendChild(tbTr);
-  return cookieTotal;
 };
 
 
@@ -67,6 +63,7 @@ function cookieHeader(){
 //Creates footer for cookie data table
 function tableFooter(){
   var arrayAdd = [];
+  var headerTotal = 0;
   var tbTr = document.createElement('tr');
   var tbTh = document.createElement('th');
   tbTh.textContent = 'Total';
@@ -78,9 +75,8 @@ function tableFooter(){
       console.log('before add ',arrayAdd[i]);
       arrayAdd[i] += allStore[j].cookiePerH[i];
       console.log('after add ',arrayAdd[i]);
-      console.log('allsote at j ',allStore[j]);
-      console.log(allStore[j].cookiePerH[i]);
     }
+    headerTotal += arrayAdd[i];
     tbTh = document.createElement('th');
     tbTh.textContent = arrayAdd[i];
     tbTr.appendChild(tbTh);
@@ -88,18 +84,18 @@ function tableFooter(){
   }
 
   tbTh = document.createElement('th');
-  tbTh.textContent = cookieTotal1;
+  tbTh.textContent = headerTotal;
   tbTr.appendChild(tbTh);
   storeTable.appendChild(tbTr);
 }
 
 
 //Creates cookie Objects
-var firstPike = new StoreLoc('firstPike', 23, 65, 6.3);
-var seaTacAirport = new StoreLoc('seaTacAir', 3, 24, 1.2);
-var seaCenter = new StoreLoc('seaCenter', 11, 38, 3.7);
-var capitolHill = new StoreLoc('capitolHill', 20, 38, 2.3);
-var alki = new StoreLoc('alki', 2, 16, 4.6);
+new StoreLoc('firstPike', 23, 65, 6.3);
+new StoreLoc('seaTacAir', 3, 24, 1.2);
+new StoreLoc('seaCenter', 11, 38, 3.7);
+new StoreLoc('capitolHill', 20, 38, 2.3);
+new StoreLoc('alki', 2, 16, 4.6);
 
 function renderAllStores(){
   for(var i in allStore){
@@ -131,11 +127,6 @@ storeForm.addEventListener('submit', addNewStore);
 //Call Objects
 cookieHeader();
 renderAllStores();
-// firstPike.cookieAmount();
-// seaTacAirport.cookieAmount();
-// seaCenter.cookieAmount();
-// capitolHill.cookieAmount();
-// alki.cookieAmount();
 tableFooter();
 
 

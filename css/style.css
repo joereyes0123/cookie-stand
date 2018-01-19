@@ -1,9 +1,12 @@
 body{
-  background-color: rgb(27, 104, 167);
+  background-color: rgb(18, 79, 129);
   text-align: center;
+  align-content: center
 }
 table{
-  background-color: rgb(238, 17, 17);
+  background-color: rgb(241, 243, 243);
+  border-color: black;
+  align-content: none;
   border-color: black;
 }
 h1{
