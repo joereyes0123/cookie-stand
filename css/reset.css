@@ -1,4 +1,4 @@
-/* /* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -31,12 +31,8 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
-h1{
-  font-size: 30px;
-}
 ol, ul {
 	list-style: none;
-  list-style-position: none;
 }
 blockquote, q {
 	quotes: none;
@@ -49,4 +45,4 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
-} */
+}
