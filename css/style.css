@@ -3,6 +3,10 @@ body{
   text-align: center;
   align-content: center
 }
+
+#fish_price{
+  align-content: left;
+}
 table{
   background-color: rgb(241, 243, 243);
   border-color: black;
